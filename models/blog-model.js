@@ -13,8 +13,7 @@ const BlogSchema = new mongoose.Schema({
         default : Date.now
     },
     image : {
-        type : String,
-        required : true
+        type : String
     },
     author : {
         type : mongoose.Schema.Types.ObjectId,
@@ -30,8 +29,8 @@ const BlogSchema = new mongoose.Schema({
         type : Number,
         required : true
     },
-    reviews : {
-        type : Number,
+    review : {
+        type : String,
         required : true
     }
 });

@@ -15,8 +15,8 @@ const createBlog = (req, res) => {
 
   blog
     .save()
-    .then(() => res.status(201).json({ msg: "Blog created!" }))
-    .catch((error) => res.status(400).json({ error }));
+    .then(() => res.status(201).json({ data: "Blog created!" }))
+    .catch((error) => res.status(400).json({ msg : error.message}));
 };
 
 const getAllBlogs = async (req, res) => {

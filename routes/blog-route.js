@@ -3,11 +3,12 @@ const router = express.Router();
 const blogController = require("../controllers/blog-controller");
 const authMiddleware = require('../middlewares/auth-middleware');
 const adminMiddleware = require("../middlewares/admin-middleware");
+const descMiddleware = require("../middlewares/desc-middleware");
 
 // Routes for the blog controller
 router
   .route("/blog/add")
-  .post(authMiddleware, adminMiddleware, blogController.createBlog);
+  .post(authMiddleware, adminMiddleware, descMiddleware, blogController.createBlog);
 
 router
     .route("/blogs")
